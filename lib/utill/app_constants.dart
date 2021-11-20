@@ -69,7 +69,7 @@ class AppConstants {
   static const String USER_EMAIL = 'user_email';
 
   static List<LanguageModel> languages = [
-    LanguageModel(imageUrl: Images.united_kindom, languageName: 'English', countryCode: 'US', languageCode: 'en'),
-    LanguageModel(imageUrl: Images.arabic, languageName: 'Arabic', countryCode: 'SA', languageCode: 'ar'),
+    LanguageModel(imageUrl: Images.united_kindom, languageName: 'Lao', countryCode: 'US', languageCode: 'en'),
+    LanguageModel(imageUrl: Images.arabic, languageName: 'English', countryCode: 'SA', languageCode: 'ar'),
   ];
 }
