@@ -268,8 +268,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   : Image.file(file, width: 100, height: 100, fit: BoxFit.fill),
                             ),
                             Positioned(
-                              bottom: 0,
-                              right: -10,
+                              bottom: 10,
+                              right: 10,
                               child: CircleAvatar(
                                 backgroundColor: ColorResources.LIGHT_SKY_BLUE,
                                 radius: 14,
