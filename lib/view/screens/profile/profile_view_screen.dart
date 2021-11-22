@@ -102,7 +102,7 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                                      SizedBox(height: 5),
                                       Text(getTranslated('total_products', context),
                                         style: TextStyle(fontSize: Dimensions.FONT_SIZE_DEFAULT,fontWeight: FontWeight.w300,color: Color(0xFFB5B5B5), fontFamily: 'Roboto'),
-                                ),
+                                      ),
                                     ],),
                                   ),
                                 ),
@@ -152,7 +152,8 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                                       inactiveIcon: Image.asset(Images.light_mode, width: 30,height: 30,fit: BoxFit.scaleDown,),
                                       onToggle:(bool isActive) =>Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
                                     ),
-                                  ],),
+                                  ],
+                                  ),
                                 ),
 
                               ),),
