@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:sixvalley_vendor_app/helper/network_info.dart';
 import 'package:sixvalley_vendor_app/localization/language_constrants.dart';
 import 'package:sixvalley_vendor_app/utill/color_resources.dart';
+import 'package:sixvalley_vendor_app/view/screens/addProduct/add_product_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/chat/inbox_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/home/home_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/menu/menu_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/order/order_screen.dart';
@@ -57,20 +59,33 @@ class _DashboardScreenState extends State<DashboardScreen> {
           items: [
             _barItem(Icons.home, getTranslated('home', context), 0),
             _barItem(Icons.shopping_bag, getTranslated('my_order', context), 1),
-            _barItem(Icons.menu, getTranslated('menu', context), 2)
+            _barItem(Icons.add, getTranslated('add_product', context), 2),
+            _barItem(Icons.message, getTranslated('message', context), 3),
+            _barItem(Icons.menu, getTranslated('menu', context), 4),
           ],
           onTap: (int index) {
-            if (index != 2) {
-              setState(() {
-                _setPage(index);
-              });
-            } else {
+            if (index == 2) {
               showModalBottomSheet(
                   context: context,
                   isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
+                  builder: (con) => AddProductScreen()
+              );
+            } else if(index == 3){
+              showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (con) => InboxScreen()
+              );
+            } else if(index == 4){
+              showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
                   builder: (con) => MenuBottomSheet()
               );
+            } else{
+              setState(() {
+                _setPage(index);
+              });
             }
           },
         ),
