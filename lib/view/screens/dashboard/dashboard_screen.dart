@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:sixvalley_vendor_app/helper/network_info.dart';
 import 'package:sixvalley_vendor_app/localization/language_constrants.dart';
@@ -10,7 +9,6 @@ import 'package:sixvalley_vendor_app/view/screens/menu/menu_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/order/order_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
-
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }
@@ -59,31 +57,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
           items: [
             _barItem(Icons.home, getTranslated('home', context), 0),
             _barItem(Icons.shopping_bag, getTranslated('my_order', context), 1),
-            _barItem(Icons.add, getTranslated('add_product', context), 2),
+            _barItem(Icons.control_point, getTranslated('add_product', context), 2),
             _barItem(Icons.message, getTranslated('message', context), 3),
-            _barItem(Icons.menu, getTranslated('menu', context), 4),
+            _barItem(Icons.view_module, getTranslated('menu', context), 4),
           ],
           onTap: (int index) {
             if (index == 2) {
-              showModalBottomSheet(
-                  context: context,
-                  isScrollControlled: true,
-                  builder: (con) => AddProductScreen()
-              );
-            } else if(index == 3){
-              showModalBottomSheet(
-                  context: context,
-                  isScrollControlled: true,
-                  builder: (con) => InboxScreen()
-              );
-            } else if(index == 4){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => AddProductScreen()));
+            } else if (index == 3) {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => InboxScreen()));
+            } else if (index == 4) {
               showModalBottomSheet(
                   context: context,
                   isScrollControlled: true,
                   // builder: (con) => ProfileScreenView()
-                  builder: (con) => MenuBottomSheet()
-              );
-            } else{
+                  builder: (con) => MenuBottomSheet());
+            } else {
               setState(() {
                 _setPage(index);
               });
@@ -107,7 +98,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
       icon: Stack(
         clipBehavior: Clip.none,
         children: [
-          Icon(icon, color: index == _pageIndex ? Theme.of(context).primaryColor : ColorResources.HINT_TEXT_COLOR, size: 25),
+          Icon(icon,
+              color: index == _pageIndex
+                  ? Theme.of(context).primaryColor
+                  : ColorResources.HINT_TEXT_COLOR,
+              size: 25),
         ],
       ),
       label: label,

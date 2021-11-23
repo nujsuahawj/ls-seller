@@ -27,8 +27,8 @@ class MenuBottomSheet extends StatelessWidget {
       decoration: BoxDecoration(
         color: ColorResources.getHomeBg(context),
         borderRadius: BorderRadius.only(
-            topLeft:  Radius.circular(25),
-            topRight: Radius.circular(25)),
+            topLeft:  Radius.circular(10),
+            topRight: Radius.circular(10)),
       ),
       child: Column(
         children: [
@@ -89,11 +89,7 @@ class MenuBottomSheet extends StatelessWidget {
                   CustomBottomSheet(image: Icons.monetization_on, title: getTranslated('wallet', context), widget: WalletScreen()),
                   // CustomBottomSheet(image: Icons.credit_card, title: getTranslated('bank_info', context), widget: BankInfoScreen()),
                   // CustomBottomSheet(image: Icons.shop, title: getTranslated('my_shop', context), widget: ShopScreen()),
-                  CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
-                  CustomBottomSheet(image: Icons.confirmation_num, title: getTranslated('terms_and_condition', context), widget: HtmlViewScreen(
-                    title: getTranslated('terms_and_condition', context),
-                    url: Provider.of<SplashProvider>(context, listen: false).configModel.termsConditions,
-                  )),
+                  // CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
                   CustomBottomSheet(image: Icons.account_box, title: getTranslated('about_us', context), widget: HtmlViewScreen(
                     title: getTranslated('about_us', context),
                     url: Provider.of<SplashProvider>(context, listen: false).configModel.aboutUs,
@@ -102,6 +98,19 @@ class MenuBottomSheet extends StatelessWidget {
                     title: getTranslated('privacy_policy', context),
                     url: Provider.of<SplashProvider>(context, listen: false).configModel.privacyPolicy,
                   )),
+                  CustomBottomSheet(image: Icons.confirmation_num, title: getTranslated('terms_and_condition', context), widget: HtmlViewScreen(
+                    title: getTranslated('terms_and_condition', context),
+                    url: Provider.of<SplashProvider>(context, listen: false).configModel.termsConditions,
+                  )),
+                  // CustomBottomSheet(image: Icons.account_box, title: getTranslated('about_us', context), widget: HtmlViewScreen(
+                  //   title: getTranslated('about_us', context),
+                  //   url: Provider.of<SplashProvider>(context, listen: false).configModel.aboutUs,
+                  // )),
+                  // CustomBottomSheet(image: Icons.privacy_tip, title: getTranslated('privacy_policy', context), widget: HtmlViewScreen(
+                  //   title: getTranslated('privacy_policy', context),
+                  //   url: Provider.of<SplashProvider>(context, listen: false).configModel.privacyPolicy,
+                  // )),
+                  CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
 
                   InkWell(
                     onTap: () {
