@@ -13,6 +13,7 @@ import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
+import 'package:sixvalley_vendor_app/view/screens/menu/widget/sign_out_confirmation_dialog.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/business_setting.dart';
 
@@ -129,6 +130,9 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Card(child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey[50],
+                                ),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                                   child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -191,6 +195,9 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Card(child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[50],
+                                  ),
                                   child: Row(children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -202,6 +209,10 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                                               child: Image.asset(Images.box)),
                                           SizedBox(width: 3,),
                                           Text(getTranslated('shipping_method', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
+                                          SizedBox(width: MediaQuery.of(context).size.width-160,),
+                                          Container(width: 15,
+                                              height: 15,
+                                              child: Image.asset(Images.arrow)),
                                         ],),
                                     ),
                                   ],),
@@ -221,6 +232,9 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Card(child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[50],
+                                  ),
                                   child: Row(children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -245,8 +259,36 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               ),
                             ),
 
+                            InkWell(
+                              onTap: (){
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => SignOutConfirmationDialog()));
+                              },
 
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[50],
+                                  ),
+                                  child: Row(children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                                      child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                              width: 15,
+                                              height: 15,
+                                              child: Image.asset(Images.logout)),
+                                          SizedBox(width: 3,),
+                                          Text(getTranslated('logout', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
+                                        ],),
+                                    ),
+                                  ],),
 
+                                ),),
+                              ),
+                            ),
+                           
                             // for Phone No
 
                           ],

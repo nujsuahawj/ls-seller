@@ -83,10 +83,12 @@ class MenuBottomSheet extends StatelessWidget {
                       ),
                     ),
                   ),
-                  CustomBottomSheet(image: Icons.message, title: getTranslated('message', context), widget: InboxScreen()),
+                   CustomBottomSheet(image: Icons.shop, title: getTranslated('my_shop', context), widget: ShopScreen()),
+                   CustomBottomSheet(image: Icons.credit_card, title: getTranslated('bank_info', context), widget: BankInfoScreen()),
+                  // CustomBottomSheet(image: Icons.message, title: getTranslated('message', context), widget: InboxScreen()),
                   CustomBottomSheet(image: Icons.monetization_on, title: getTranslated('wallet', context), widget: WalletScreen()),
-                  CustomBottomSheet(image: Icons.credit_card, title: getTranslated('bank_info', context), widget: BankInfoScreen()),
-                  CustomBottomSheet(image: Icons.home_filled, title: getTranslated('my_shop', context), widget: ShopScreen()),
+                  // CustomBottomSheet(image: Icons.credit_card, title: getTranslated('bank_info', context), widget: BankInfoScreen()),
+                  // CustomBottomSheet(image: Icons.shop, title: getTranslated('my_shop', context), widget: ShopScreen()),
                   CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
                   CustomBottomSheet(image: Icons.confirmation_num, title: getTranslated('terms_and_condition', context), widget: HtmlViewScreen(
                     title: getTranslated('terms_and_condition', context),
@@ -107,28 +109,28 @@ class MenuBottomSheet extends StatelessWidget {
                       showCupertinoModalPopup(context: context, builder: (_) => SignOutConfirmationDialog());
                     },
 
-                    child: Container(
-                      height: 120,
-                      width: 120,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: ColorResources.getBottomSheetColor(context),
-                          borderRadius: BorderRadius.circular(12),
-                        boxShadow: [BoxShadow(color: Colors.grey[Provider.of<ThemeProvider>(context).darkTheme ? 800 : 200], spreadRadius: 0.5, blurRadius: 0.3)],
-                      ),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(Images.logout, height: 30,width: 30, color: Colors.red),
-                            Center(
-                              child: Text(
-                                getTranslated('logout', context),
-                                textAlign: TextAlign.center, maxLines: 1, overflow: TextOverflow.ellipsis,
-                                style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ]),
-                    ),
+                    // child: Container(
+                    //   height: 120,
+                    //   width: 120,
+                    //   padding: EdgeInsets.all(10),
+                    //   decoration: BoxDecoration(
+                    //       color: ColorResources.getBottomSheetColor(context),
+                    //       borderRadius: BorderRadius.circular(12),
+                    //     boxShadow: [BoxShadow(color: Colors.grey[Provider.of<ThemeProvider>(context).darkTheme ? 800 : 200], spreadRadius: 0.5, blurRadius: 0.3)],
+                    //   ),
+                    //   child: Column(
+                    //       mainAxisAlignment: MainAxisAlignment.center,
+                    //       children: [
+                    //         Image.asset(Images.logout, height: 30,width: 30, color: Colors.red),
+                    //         Center(
+                    //           child: Text(
+                    //             getTranslated('logout', context),
+                    //             textAlign: TextAlign.center, maxLines: 1, overflow: TextOverflow.ellipsis,
+                    //             style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),
+                    //           ),
+                    //         ),
+                    //       ]),
+                    // ),
                   )
                 ],
               ),
