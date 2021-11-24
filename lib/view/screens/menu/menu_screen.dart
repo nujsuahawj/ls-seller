@@ -16,6 +16,7 @@ import 'package:sixvalley_vendor_app/view/screens/more/html_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/restaurant/shop_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/setting_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/transaction/transaction_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/wallet/wallet_screen.dart';
 
 class MenuBottomSheet extends StatelessWidget {
@@ -110,13 +111,14 @@ class MenuBottomSheet extends StatelessWidget {
                   //   title: getTranslated('privacy_policy', context),
                   //   url: Provider.of<SplashProvider>(context, listen: false).configModel.privacyPolicy,
                   // )),
+                  CustomBottomSheet(image: Icons.list_alt, title: getTranslated('transactions', context), widget: TransactionScreen()),
                   CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
 
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).pop();
-                      showCupertinoModalPopup(context: context, builder: (_) => SignOutConfirmationDialog());
-                    },
+                  // InkWell(
+                  //   onTap: () {
+                  //     Navigator.of(context).pop();
+                  //     showCupertinoModalPopup(context: context, builder: (_) => SignOutConfirmationDialog());
+                  //   },
 
                     // child: Container(
                     //   height: 120,
@@ -140,7 +142,7 @@ class MenuBottomSheet extends StatelessWidget {
                     //         ),
                     //       ]),
                     // ),
-                  )
+                  // )
                 ],
               ),
             ),

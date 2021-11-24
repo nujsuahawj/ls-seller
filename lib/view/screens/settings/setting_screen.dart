@@ -34,11 +34,11 @@ class SettingsScreen extends StatelessWidget {
               title: '${getTranslated('currency', context)} (${Provider.of<SplashProvider>(context).myCurrency.name})',
               onTap: () => showAnimatedDialog(context, LanguageDialog(isCurrency: true)),
             ),
-            TitleButton(
-                icon: Icons.list_alt,
-                title: getTranslated('transactions', context),
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => TransactionScreen()))
-            ),
+            // TitleButton(
+            //     icon: Icons.list_alt,
+            //     title: getTranslated('transactions', context),
+            //     onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => TransactionScreen()))
+            // ),
           ],
         ),
       ),
