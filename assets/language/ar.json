@@ -259,5 +259,6 @@
   "shipping_method_deleted_successfully": "Shipping method deleted successfully",
   "discount_amount": "Discount Amount",
   "submit_request": "Submit Request",
-  "enter_tax": "Enter tax"
+  "enter_tax": "Enter tax",
+  "become_a_seller":"Become a seller"
 }

@@ -127,41 +127,38 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               ],),
                             ),
 
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Card(child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.grey[50],
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                                  child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        width: 15,
-                                          height: 15,
-                                          child: Image.asset(Images.dark)),
-                                    SizedBox(width: 3,),
-                                    Text(getTranslated('dark_theme', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                                    Expanded(child: SizedBox()),
-                                    FlutterSwitch(
-                                      width: 50.0,
-                                      height: 25.0,
-                                      toggleSize: 30.0,
-                                      value: Provider.of<ThemeProvider>(context).darkTheme,
-                                      borderRadius: 10.0,
-                                      activeColor: Theme.of(context).primaryColor,
-                                      padding: 1.0,
-                                      activeIcon: Image.asset(Images.dark_mode, width: 30,height: 30, fit: BoxFit.scaleDown),
-                                      inactiveIcon: Image.asset(Images.light_mode, width: 30,height: 30,fit: BoxFit.scaleDown,),
-                                      onToggle:(bool isActive) =>Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
-                                    ),
-                                  ],
-                                  ),
-                                ),
+                            // Padding(
+                            //   padding: const EdgeInsets.all(8.0),
+                            //   child: Card(child: Container(
+                            //     child: Padding(
+                            //       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                            //       child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            //         children: [
+                            //           Container(
+                            //             width: 15,
+                            //               height: 15,
+                            //               child: Image.asset(Images.dark)),
+                            //         SizedBox(width: 3,),
+                            //         Text(getTranslated('dark_theme', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
+                            //         Expanded(child: SizedBox()),
+                            //         FlutterSwitch(
+                            //           width: 50.0,
+                            //           height: 25.0,
+                            //           toggleSize: 30.0,
+                            //           value: Provider.of<ThemeProvider>(context).darkTheme,
+                            //           borderRadius: 10.0,
+                            //           activeColor: Theme.of(context).primaryColor,
+                            //           padding: 1.0,
+                            //           activeIcon: Image.asset(Images.dark_mode, width: 30,height: 30, fit: BoxFit.scaleDown),
+                            //           inactiveIcon: Image.asset(Images.light_mode, width: 30,height: 30,fit: BoxFit.scaleDown,),
+                            //           onToggle:(bool isActive) =>Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
+                            //         ),
+                            //       ],
+                            //       ),
+                            //     ),
 
-                              ),),
-                            ),
+                            //   ),),
+                            // ),
                             // Padding(
                             //   padding: const EdgeInsets.all(8.0),
                             //   child: Card(child: Container(
@@ -195,9 +192,6 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Card(child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[50],
-                                  ),
                                   child: Row(children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -232,9 +226,6 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Card(child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[50],
-                                  ),
                                   child: Row(children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -267,9 +258,6 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Card(child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[50],
-                                  ),
                                   child: Row(children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),

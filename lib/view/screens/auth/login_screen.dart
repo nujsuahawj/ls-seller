@@ -165,8 +165,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                     }
                 },
               )) : Center( child: CircularProgressIndicator( valueColor: new AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
-
+              
               )),
+              new GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "myRoute");
+                },
+                child: new Text('${getTranslated('become_a_seller', context)}'),
+              ),
             ],
           ),
         ),
