@@ -185,8 +185,7 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                                 // showModalBottomSheet(
                                 //     backgroundColor: Colors.transparent,
                                 //     isScrollControlled: true,
-                                //     context: context, builder: (_) => ShippingMethodScreen());
-                                //Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => ProfileScreenView()));
+                                //     context: context, builder: (_) => BusinessScreen());
                               },
 
                               child: Padding(

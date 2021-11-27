@@ -79,26 +79,26 @@ class HomeScreen extends StatelessWidget {
                             children: [
 
                               OrderTypeButtonHead(
-                                color: Color(0xFF3E215D),
+                                color: Color(0xff23CB60),
                                 text: getTranslated('pending', context), index: 1,
                                 subText: getTranslated('orders', context),
                                 orderList: orderProvider.pendingList, callback: callback,
                               ),
                               OrderTypeButtonHead(
-                                color: Color(0xFF053742),
+                                color: Color(0xff00ADE3),
                                 text: getTranslated('processing', context), index: 2,
                                 orderList: orderProvider.processing, callback: callback,
                                 subText: getTranslated('orders', context),
 
                               ),
                               OrderTypeButtonHead(
-                                color: Color(0xFF001E6C),
+                                color: Color(0xFFFFAA47),
                                 text: getTranslated('confirmed', context), index: 7,
                                 subText: getTranslated('orders', context),
                                 orderList: orderProvider.confirmedList, callback: callback,
                               ),
                               OrderTypeButtonHead(
-                                color: Color(0xFF343A40),
+                                color: Color(0xff7DB6F5),
                                 text: getTranslated('out_for_delivery', context), index: 8,
                                 subText: '',
                                 orderList: orderProvider.outForDeliveryList, callback: callback,

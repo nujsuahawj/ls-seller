@@ -512,7 +512,7 @@ class _AddProductNextScreenState extends State<AddProductNextScreen> {
                       nextNode: _purchasePriceNode,
                       textInputAction: TextInputAction.next,
                       textInputType: TextInputType.number,
-                      hintText: '\$129',
+                      hintText: '\₭100000',
                     ),
 
                     SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
@@ -525,7 +525,7 @@ class _AddProductNextScreenState extends State<AddProductNextScreen> {
                       nextNode: _taxNode,
                       textInputType: TextInputType.number,
                       textInputAction: TextInputAction.next,
-                      hintText: '\$129',
+                      hintText: '\₭10000',
                     ),
 
                     SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
@@ -538,7 +538,7 @@ class _AddProductNextScreenState extends State<AddProductNextScreen> {
                       nextNode: _discountNode,
                       textInputAction: TextInputAction.next,
                       textInputType: TextInputType.number,
-                      hintText: '10',
+                      hintText: '100',
                     ),
                     SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
 
@@ -553,7 +553,7 @@ class _AddProductNextScreenState extends State<AddProductNextScreen> {
                           ),
                           SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
                           CustomTextField(
-                            hintText: 'discount',
+                            hintText: 'ສ່ວນຫຼຸດ',
                             controller: _discountController,
                             focusNode: _discountNode,
                             nextNode: _totalQuantityNode,
@@ -688,7 +688,7 @@ class _AddProductNextScreenState extends State<AddProductNextScreen> {
                       controller: _youtubeLinkController,
                       focusNode: _youtubeLinkNode,
                       textInputAction: TextInputAction.done,
-                      hintText: 'www.youtube.com/6valley',
+                      hintText: 'www.youtube.com/laoshop',
 
                     ),
 
