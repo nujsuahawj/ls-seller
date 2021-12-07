@@ -5,7 +5,7 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="20"
 9        android:targetSdkVersion="30" />
 10    <!--
 11         Flutter needs it to communicate with the running application
@@ -107,6 +107,23 @@
 71                android:resource="@xml/flutter_image_picker_file_paths" />
 71-->[:image_picker] D:\Flutter\app\Seller App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
 72        </provider>
-73    </application>
-74
-75</manifest>
+73        <provider
+73-->[:flutter_webview_plugin] D:\Flutter\app\Seller App\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:9:9-18:20
+74            android:name="androidx.core.content.FileProvider"
+74-->[:flutter_webview_plugin] D:\Flutter\app\Seller App\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-62
+75            android:authorities="com.nuj.sixvalley_vendor_app.fileprovider"
+75-->[:flutter_webview_plugin] D:\Flutter\app\Seller App\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-64
+76            android:exported="false"
+76-->[:flutter_webview_plugin] D:\Flutter\app\Seller App\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-37
+77            android:grantUriPermissions="true" >
+77-->[:flutter_webview_plugin] D:\Flutter\app\Seller App\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-47
+78            <meta-data
+78-->[:image_picker] D:\Flutter\app\Seller App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+79-->[:image_picker] D:\Flutter\app\Seller App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+80                android:resource="@xml/filepaths" />
+80-->[:image_picker] D:\Flutter\app\Seller App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+81        </provider>
+82    </application>
+83
+84</manifest>

@@ -66,7 +66,7 @@ class ChatScreen extends StatelessWidget {
                           maxLines: null,
                           expands: true,
                           decoration: InputDecoration(
-                            hintText: 'Type here...',
+                            hintText: 'ພິມຂໍ້ຄວາມ...',
                             hintStyle: titilliumRegular.copyWith(color: ColorResources.HINT_TEXT_COLOR),
                             border: InputBorder.none,
                           ),

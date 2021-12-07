@@ -118,7 +118,7 @@ class _ShippingMethodScreenState extends State<ShippingMethodScreen> {
 
                 SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
                 CustomTextField(
-                  hintText: '4-6 days',
+                  hintText: '4-6 ມື້',
                   focusNode: _addressNode,
                   controller: _durationController,
                   textInputType: TextInputType.streetAddress,
@@ -132,7 +132,7 @@ class _ShippingMethodScreenState extends State<ShippingMethodScreen> {
 
                 SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
                 CustomTextField(
-                  hintText: '\$100',
+                  hintText: '\₭100',
                   controller: _costController,
                   focusNode: _phoneNode,
                   textInputAction: TextInputAction.done,

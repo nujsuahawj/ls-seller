@@ -9,6 +9,7 @@ import 'package:sixvalley_vendor_app/view/base/custom_button.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_snackbar.dart';
 import 'package:sixvalley_vendor_app/view/base/textfeild/custom_pass_textfeild.dart';
 import 'package:sixvalley_vendor_app/view/base/textfeild/custom_text_feild.dart';
+import 'package:sixvalley_vendor_app/view/screens/auth/register.dart';
 import 'package:sixvalley_vendor_app/view/screens/dashboard/dashboard_screen.dart';
 
 class SignInWidget extends StatefulWidget {
@@ -167,12 +168,15 @@ class _SignInWidgetState extends State<SignInWidget> {
               )) : Center( child: CircularProgressIndicator( valueColor: new AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
               
               )),
-              new GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, "myRoute");
-                },
-                child: new Text('${getTranslated('become_a_seller', context)}'),
+              TextButton(
+              onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Register()));
+              },
+              child: Text(
+                '${getTranslated('become_a_seller', context)}', //title
+                textAlign: TextAlign.end, //aligment
               ),
+            ),
             ],
           ),
         ),

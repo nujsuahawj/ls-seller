@@ -49,14 +49,14 @@ class BusinessScreen extends StatelessWidget {
                               children: [
 
                               Column( crossAxisAlignment: CrossAxisAlignment.start,children: [
-                                Text('Title : ${shipProv.shippingList[index].title}', style: titilliumBold.copyWith(color: ColorResources.getTextColor(context), fontSize: Dimensions.FONT_SIZE_LARGE)),
+                                Text('ຫົວຂໍ້ : ${shipProv.shippingList[index].title}', style: titilliumBold.copyWith(color: ColorResources.getTextColor(context), fontSize: Dimensions.FONT_SIZE_LARGE)),
                                 Row(mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text('${PriceConverter.convertPrice(context, shipProv.shippingList[index].cost)}', style: titilliumBold.copyWith(color: ColorResources.getTextColor(context), fontSize: 11)),
                                   SizedBox(width: 10,),
                                     Icon(Icons.access_time_sharp, color: Colors.grey,size: 12,),
                                     SizedBox(width: 5,),
-                                    Text('${shipProv.shippingList[index].duration}days', style: titilliumBold.copyWith(color: ColorResources.getTextColor(context), fontSize: Dimensions.FONT_SIZE_SMALL)),
+                                    Text('${shipProv.shippingList[index].duration}ມື້', style: titilliumBold.copyWith(color: ColorResources.getTextColor(context), fontSize: Dimensions.FONT_SIZE_SMALL)),
 
                                   ],
                                 ),
