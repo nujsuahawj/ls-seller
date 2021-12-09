@@ -13,6 +13,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/base/confirmation_dialog.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
 import 'package:sixvalley_vendor_app/view/base/no_shipping_method.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/business_setting_details.dart';
 
 class BusinessScreen extends StatelessWidget {
@@ -22,7 +23,24 @@ class BusinessScreen extends StatelessWidget {
     Provider.of<ShippingProvider>(context, listen: false).getShippingList(context,Provider.of<AuthProvider>(context,listen: false).getUserToken());
 
     return Scaffold(
-      appBar: CustomAppBar(title: getTranslated('business_settings', context)),
+      // appBar: CustomAppBar(title: getTranslated('business_settings', context)),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        elevation: 0,
+        title: Text(getTranslated('business_settings', context),
+        style: titilliumRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE, color: Theme.of(context).textTheme.bodyText1.color)
+        ),
+        leading:  IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Theme.of(context).textTheme.bodyText1.color,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreenView()),
+            );
+          },
+        ),
+      ),
       body: SafeArea(
         child: Consumer<ShippingProvider>(
           builder: (context, shipProv, child) => Column(

@@ -13,6 +13,7 @@ import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
+import 'package:sixvalley_vendor_app/view/screens/dashboard/dashboard_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/menu/widget/sign_out_confirmation_dialog.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/business_setting.dart';
@@ -55,7 +56,13 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                 padding: EdgeInsets.only(top: 35, left: 15),
                 child: Row(children: [
                   CupertinoNavigationBarBackButton(
-                    onPressed: () => Navigator.of(context).pop(),
+                    // onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DashboardScreen()),
+                      );
+                    },
                     color: ColorResources.getBottomSheetColor(context),
                   ),
                   SizedBox(width: 10),

@@ -88,7 +88,24 @@ class _ShippingMethodScreenState extends State<ShippingMethodScreen> {
     }
     return Scaffold(
       key: _scaffoldKey,
-      appBar: CustomAppBar(title: getTranslated('shipping_method', context)),
+      // appBar: CustomAppBar(title: getTranslated('shipping_method', context)),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        elevation: 0,
+        title: Text(getTranslated('shipping_method', context),
+        style: titilliumRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE, color: Theme.of(context).textTheme.bodyText1.color)
+        ),
+        leading:  IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Theme.of(context).textTheme.bodyText1.color,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BusinessScreen()),
+            );
+          },
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(Dimensions.PADDING_SIZE_LARGE),
         child: Consumer<AuthProvider>(
