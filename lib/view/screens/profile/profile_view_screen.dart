@@ -13,10 +13,17 @@ import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
+import 'package:sixvalley_vendor_app/view/base/custom_bottom_sheet.dart';
+import 'package:sixvalley_vendor_app/view/screens/bank_info/bank_info_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/dashboard/dashboard_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/menu/widget/sign_out_confirmation_dialog.dart';
+import 'package:sixvalley_vendor_app/view/screens/more/html_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/restaurant/shop_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/business_setting.dart';
+import 'package:sixvalley_vendor_app/view/screens/settings/setting_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/transaction/transaction_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/wallet/wallet_screen.dart';
 
 class ProfileScreenView extends StatefulWidget {
   @override
@@ -133,163 +140,47 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                                 ),
                               ],),
                             ),
-
-                            // Padding(
-                            //   padding: const EdgeInsets.all(8.0),
-                            //   child: Card(child: Container(
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                            //       child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //         children: [
-                            //           Container(
-                            //             width: 15,
-                            //               height: 15,
-                            //               child: Image.asset(Images.dark)),
-                            //         SizedBox(width: 3,),
-                            //         Text(getTranslated('dark_theme', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                            //         Expanded(child: SizedBox()),
-                            //         FlutterSwitch(
-                            //           width: 50.0,
-                            //           height: 25.0,
-                            //           toggleSize: 30.0,
-                            //           value: Provider.of<ThemeProvider>(context).darkTheme,
-                            //           borderRadius: 10.0,
-                            //           activeColor: Theme.of(context).primaryColor,
-                            //           padding: 1.0,
-                            //           activeIcon: Image.asset(Images.dark_mode, width: 30,height: 30, fit: BoxFit.scaleDown),
-                            //           inactiveIcon: Image.asset(Images.light_mode, width: 30,height: 30,fit: BoxFit.scaleDown,),
-                            //           onToggle:(bool isActive) =>Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
-                            //         ),
-                            //       ],
-                            //       ),
-                            //     ),
-
-                            //   ),),
-                            // ),
-                            // Padding(
-                            //   padding: const EdgeInsets.all(8.0),
-                            //   child: Card(child: Container(
-                            //     child: Row(children: [
-                            //       Padding(
-                            //         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                            //         child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //           children: [
-                            //             Container(
-                            //                 width: 15,
-                            //                 height: 15,
-                            //                 child: Image.asset(Images.lock)),
-                            //             SizedBox(width: 3,),
-                            //             Text(getTranslated('change_password', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                            //           ],),
-                            //       ),
-                            //     ],),
-                            //
-                            //   ),),
-                            // ),
-                            InkWell(
-                              onTap: (){
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => BusinessScreen()));
-                                // showModalBottomSheet(
-                                //     backgroundColor: Colors.transparent,
-                                //     isScrollControlled: true,
-                                //     context: context, builder: (_) => BusinessScreen());
-                              },
-
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Card(child: Container(
-                                  child: Row(children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                                      child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                              width: 15,
-                                              height: 15,
-                                              child: Image.asset(Images.box)),
-                                          SizedBox(width: 3,),
-                                          Text(getTranslated('shipping_method', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                                          SizedBox(width: MediaQuery.of(context).size.width-160,),
-                                          Container(width: 15,
-                                              height: 15,
-                                              child: Image.asset(Images.arrow)),
-                                        ],),
-                                    ),
-                                  ],),
-
-                                ),),
+                            
+                              Container(
+                                height: 80,
+                                margin: EdgeInsets.only(right: 10.0,left: 10.0), 
+                                child: Row(children: [
+                                  CustomBottomSheet(image: Icons.shop, title: getTranslated('my_shop', context), widget: ShopScreen()),
+                                  CustomBottomSheet(image: Icons.credit_card, title: getTranslated('bank_info', context), widget: BankInfoScreen()),
+                                  CustomBottomSheet(image: Icons.monetization_on, title: getTranslated('wallet', context), widget: WalletScreen()),
+                                ],),
                               ),
+                            Container(
+                              height: 80,
+                              margin: EdgeInsets.only(right: 10.0,left: 10.0), 
+                              child: Row(children: [
+                                CustomBottomSheet(image: Icons.account_box, title: getTranslated('about_us', context), widget: HtmlViewScreen(
+                                  title: getTranslated('about_us', context),
+                                  url: Provider.of<SplashProvider>(context, listen: false).configModel.aboutUs,
+                                )),
+                                CustomBottomSheet(image: Icons.privacy_tip, title: getTranslated('privacy_policy', context), widget: HtmlViewScreen(
+                                  title: getTranslated('privacy_policy', context),
+                                  url: Provider.of<SplashProvider>(context, listen: false).configModel.privacyPolicy,
+                                )),
+                                CustomBottomSheet(image: Icons.confirmation_num, title: getTranslated('terms_and_condition', context), widget: HtmlViewScreen(
+                                  title: getTranslated('terms_and_condition', context),
+                                  url: Provider.of<SplashProvider>(context, listen: false).configModel.termsConditions,
+                                )),
+                              ],),
                             ),
-
-                            InkWell(
-                              onTap: (){
-                                showModalBottomSheet(
-                                    backgroundColor: Colors.transparent,
-                                    isScrollControlled: true,
-                                    context: context, builder: (_) => ProfileScreen());
-                                //Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => ProfileScreenView()));
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Card(child: Container(
-                                  child: Row(children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                                      child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                              width: 15,
-                                              height: 15,
-                                              child: Image.asset(Images.edit)),
-                                          SizedBox(width: 3,),
-                                          Text(getTranslated('edit_profile', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                                          SizedBox(width: MediaQuery.of(context).size.width-160,),
-
-                                          Container(width: 15,
-                                              height: 15,
-                                              child: Image.asset(Images.arrow)),
-                                        ],),
-                                    ),
-                                  ],),
-
-                                ),),
-                              ),
+                            Container(
+                              height: 80,
+                              margin: EdgeInsets.only(right: 10.0,left: 10.0), 
+                              child: Row(children: [
+                                CustomBottomSheet(image: Icons.list_alt, title: getTranslated('transactions', context), widget: TransactionScreen()),
+                                CustomBottomSheet(image: Icons.settings, title: getTranslated('more', context), widget: SettingsScreen()),
+                              ],),
                             ),
-
-                            InkWell(
-                              onTap: (){
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => SignOutConfirmationDialog()));
-                              },
-
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Card(child: Container(
-                                  child: Row(children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                                      child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                              width: 15,
-                                              height: 15,
-                                              child: Image.asset(Images.logout)),
-                                          SizedBox(width: 3,),
-                                          Text(getTranslated('logout', context), style: robotoRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE)),
-                                        ],),
-                                    ),
-                                  ],),
-
-                                ),),
-                              ),
-                            ),
-                           
-                            // for Phone No
 
                           ],
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),

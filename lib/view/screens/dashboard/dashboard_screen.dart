@@ -7,6 +7,7 @@ import 'package:sixvalley_vendor_app/view/screens/chat/inbox_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/home/home_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/menu/menu_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/order/order_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -59,7 +60,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             _barItem(Icons.shopping_bag, getTranslated('my_order', context), 1),
             _barItem(Icons.control_point, getTranslated('add_product', context), 2),
             _barItem(Icons.message, getTranslated('message', context), 3),
-            _barItem(Icons.view_module, getTranslated('menu', context), 4),
+            _barItem(Icons.account_circle_rounded, getTranslated('profile', context), 4),
           ],
           onTap: (int index) {
             if (index == 2) {
@@ -72,8 +73,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               showModalBottomSheet(
                   context: context,
                   isScrollControlled: true,
-                  // builder: (con) => ProfileScreenView()
-                  builder: (con) => MenuBottomSheet());
+                  builder: (con) => ProfileScreenView()
+                  // builder: (con) => MenuBottomSheet()
+                  );
             } else {
               setState(() {
                 _setPage(index);
