@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(width: 10),
             Text(AppConstants.APP_NAME, style: titilliumBold.copyWith(color: Theme.of(context).textTheme.bodyText1.color)),
             Spacer(),
-            Icon(Icons.notifications, color: Colors.blue,),
+            Icon(Icons.add_alert_sharp, color: Colors.blue,),
           ],
         ),
         backgroundColor: ColorResources.getBottomSheetColor(context),

@@ -11,6 +11,7 @@ import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_button.dart';
 import 'package:sixvalley_vendor_app/view/base/no_data_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/bank_info/bank_editing_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 
 class BankInfoScreen extends StatelessWidget {
 
@@ -20,7 +21,24 @@ class BankInfoScreen extends StatelessWidget {
     Provider.of<BankInfoProvider>(context, listen: false).getBankInfo(context);
 
     return Scaffold(
-      appBar: CustomAppBar(title: getTranslated('bank_info', context)),
+      // appBar: CustomAppBar(title: getTranslated('bank_info', context)),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        elevation: 0,
+        title: Text(getTranslated('bank_info', context),
+        style: titilliumRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE, color: Theme.of(context).textTheme.bodyText1.color)
+        ),
+        leading:  IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Theme.of(context).textTheme.bodyText1.color,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreenView()),
+            );
+          },
+        ),
+      ),
       body: SafeArea(
         child: Container(
           child: Consumer<BankInfoProvider>(

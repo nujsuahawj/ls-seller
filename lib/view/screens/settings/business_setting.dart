@@ -11,7 +11,6 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/base/confirmation_dialog.dart';
-import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
 import 'package:sixvalley_vendor_app/view/base/no_shipping_method.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/business_setting_details.dart';

@@ -9,9 +9,10 @@ import 'package:sixvalley_vendor_app/provider/transaction_provider.dart';
 import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
-import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
+import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_edit_dialog.dart';
 import 'package:sixvalley_vendor_app/view/base/no_data_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/transaction/transaction_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/transaction/widget/transaction_widget.dart';
 
@@ -20,7 +21,24 @@ class WalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Provider.of<TransactionProvider>(context, listen: false).getTransactionList(context);
     return Scaffold(
-      appBar: CustomAppBar(title: getTranslated('wallet', context)),
+      // appBar: CustomAppBar(title: getTranslated('wallet', context)),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        elevation: 0,
+        title: Text(getTranslated('wallet', context),
+        style: titilliumRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE, color: Theme.of(context).textTheme.bodyText1.color)
+        ),
+        leading:  IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Theme.of(context).textTheme.bodyText1.color,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreenView()),
+            );
+          },
+        ),
+      ),
       body: SafeArea(
         child: Container(
           child: Column(children: [

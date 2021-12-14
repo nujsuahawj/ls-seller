@@ -13,6 +13,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/base/no_data_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/dashboard/dashboard_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/restaurant/shop_update_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/restaurant/widget/all_product_widget.dart';
 import 'package:sixvalley_vendor_app/view/screens/review/product_review_screen.dart';
@@ -92,7 +93,7 @@ class _ShopScreenState extends State<ShopScreen> {
                             ),
                             InkWell(
                               // onTap: ()=> Navigator.pop(context),
-                              onTap:  ()=> Navigator.push(context,    MaterialPageRoute(builder: (context) => DashboardScreen()),),
+                              onTap:  ()=> Navigator.push(context,    MaterialPageRoute(builder: (context) => ProfileScreenView()),),
                               child: Padding(
                                 padding: const EdgeInsets.all(Dimensions.PADDING_SIZE_DEFAULT),
                                 child: Icon(Icons.arrow_back_ios_rounded),

@@ -10,8 +10,8 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_dialog.dart';
+import 'package:sixvalley_vendor_app/view/screens/profile/profile_view_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/settings/widget/language_dialog.dart';
-import 'package:sixvalley_vendor_app/view/screens/transaction/transaction_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -19,7 +19,24 @@ class SettingsScreen extends StatelessWidget {
     Provider.of<SplashProvider>(context, listen: false).setFromSetting(true);
 
     return Scaffold(
-      appBar: CustomAppBar(title: getTranslated('more', context),),
+      // appBar: CustomAppBar(title: getTranslated('more', context),),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        elevation: 0,
+        title: Text(getTranslated('more', context),
+        style: titilliumRegular.copyWith(fontSize: Dimensions.FONT_SIZE_LARGE, color: Theme.of(context).textTheme.bodyText1.color)
+        ),
+        leading:  IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Theme.of(context).textTheme.bodyText1.color,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreenView()),
+            );
+          },
+        ),
+      ),
       body: SafeArea( 
         child: ListView(
           physics: BouncingScrollPhysics(),
@@ -81,7 +98,7 @@ class TitleButton extends StatelessWidget {
   final IconData icon;
   final String title;
   final Function onTap;
-  TitleButton({@required this.icon, @required this.title, @required this.onTap});
+  TitleButton({@required this.icon, @required this.title, @required this.onTap, TextAlign textAlign});
 
   @override
   Widget build(BuildContext context) {
