@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 
 class AppConstants {
 
-  static const String APP_NAME = 'sixValley';
+  static const String APP_NAME = 'LaoShop';
   static const String BASE_URL = 'https://lao-shop.com/';
   static const String LOGIN_URI = '/api/v2/seller/auth/login';
   static const String CONFIG_URI = '/api/v1/config';

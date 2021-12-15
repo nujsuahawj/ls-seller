@@ -59,7 +59,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             _barItem(Icons.shopping_bag, getTranslated('my_order', context), 1),
             _barItem(Icons.control_point, getTranslated('add_product', context), 2),
             _barItem(Icons.message, getTranslated('message', context), 3),
-            _barItem(Icons.account_box_sharp, getTranslated('profile', context), 4),
+            _barItem(Icons.account_box_rounded, getTranslated('profile', context), 4),
           ],
           onTap: (int index) {
             if (index == 2) {
