@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "archive",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/args-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1",
       "packageUri": "lib/",
@@ -206,6 +218,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_launcher_icons",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_layout_grid",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_layout_grid-1.0.3",
       "packageUri": "lib/",
@@ -298,6 +316,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "image",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/image-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -674,13 +698,19 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sixvalley_vendor_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-12-07T16:00:38.265251Z",
+  "generated": "2021-12-16T11:40:24.001608Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }
