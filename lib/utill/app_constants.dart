@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 
 class AppConstants {
 
-  static const String APP_NAME = 'LaoShop';
+  static const String APP_NAME = 'LaoShop Vendor';
   static const String BASE_URL = 'https://lao-shop.com/';
   static const String LOGIN_URI = '/api/v2/seller/auth/login';
   static const String CONFIG_URI = '/api/v1/config';
@@ -69,7 +69,7 @@ class AppConstants {
   static const String USER_EMAIL = 'user_email';
 
   static List<LanguageModel> languages = [
-    LanguageModel(imageUrl: Images.united_kindom, languageName: 'Lao', countryCode: 'US', languageCode: 'en'),
-    LanguageModel(imageUrl: Images.arabic, languageName: 'English', countryCode: 'SA', languageCode: 'ar'),
+    LanguageModel(imageUrl: Images.united_kindom, languageName: 'LAO', countryCode: 'LA', languageCode: 'en'),
+    LanguageModel(imageUrl: Images.arabic, languageName: 'English', countryCode: 'US', languageCode: 'lo'),
   ];
 }
