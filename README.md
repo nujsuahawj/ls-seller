@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# sixvalley_vendor_app
+# ls-seller
 
 A new Flutter application.
 
